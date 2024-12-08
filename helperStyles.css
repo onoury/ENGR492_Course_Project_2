@@ -1,0 +1,54 @@
+.custom-select {
+    position: relative;
+}
+
+.select-items {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 99;
+    top: 2rem;
+    left: 7rem;
+}
+
+.select-items div {
+    padding: 3px;
+    cursor: pointer;
+    width: 6rem;
+
+    min-height: 1.25rem;
+}
+
+.select-items div:hover {
+    background-color: #f1f1f1;
+}
+
+.select-selected {
+    /* background-color: white; */
+    padding-block: 5px;
+    /* border: 1px solid black; */
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.375px;
+    text-wrap: nowrap;
+    text-align: center;
+    min-height: 1.25rem;
+}
+
+
+.custom-option{
+    font-size: 0.75rem;
+    margin-block: auto;
+    border: solid 1px black;
+    font-weight: bold;
+    letter-spacing: 0.375px;
+    text-wrap: nowrap;
+    text-align: center;
+}
+
+
+
+
+

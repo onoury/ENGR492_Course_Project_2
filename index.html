@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="helperStyles.css">
+    <title>ENGR 492 - Course Project # 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs/lib/browser/math.js"></script>
+</head>
+
+<body>
+    <div class="body" style="justify-items: stretch;">
+        <section class="header" style="position: relative;">
+            <div id="darkMode-btn" class="darkModeBtn">
+            <svg id="darkMode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style=" height: 3.5rem; width: 3.5rem; background-color: white; border: 4px solid burlywood; border-radius: 100px; transition: 1000ms ease-in-out all">
+                <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8V16Z" fill="#000000"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 4V8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16V20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z" fill="#000000"/>
+            </svg>
+            <text style="position: absolute; top: 120%; left: 20%; font-size: large; ">Dark Mode</text>
+            </div>
+
+            <a href="https://onoury.github.io/ENGR492_Project_2_Report" target="_blank" id="ReportLinkBtn" style="position: absolute; top: 6%; left: 3rem; height: 8rem; width: 4rem; scale: 0.9; ">
+                    <svg id="Report-svg-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="icon" style=" height: 3.5rem; width: 3.5rem; background-color: white; border: 2px solid burlywood; border-radius: 10px; transition: 1000ms ease-in-out all">
+                            <path d="M719.8 651.8m-10 0a10 10 0 1 0 20 0 10 10 0 1 0-20 0Z" fill="#E73B37" /><path d="M512.1 64H172v896h680V385.6L512.1 64z m278.8 324.3h-280v-265l280 265zM808 916H216V108h278.6l0.2 0.2v296.2h312.9l0.2 0.2V916z" fill="#39393A" /><path d="M280.5 530h325.9v16H280.5z" fill="#39393A" /><path d="M639.5 530h90.2v16h-90.2z" fill="#E73B37" /><path d="M403.5 641.8h277v16h-277z" fill="#39393A" /><path d="M280.6 641.8h91.2v16h-91.2z" fill="#E73B37" /><path d="M279.9 753.7h326.5v16H279.9z" fill="#39393A" /><path d="M655.8 753.7h73.9v16h-73.9z" fill="#E73B37" />
+                    </svg>
+                <text style="position: absolute; top: 45%; left: -70% ; text-wrap: nowrap; font-size: medium; text-decoration: underline; color: #202587;"><b>Open Project Report</b></text>
+            </a>
+            <h1 class="title">ENGR 492</h1>
+            <h2 class="subtitle">Course Project # 2</h2>
+            <svg id="flip-tables-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 14" style="position:absolute; right: 1rem; height: 5rem; width: 10rem; transform: rotate(90deg) scale(0.375); background-color: beige; border: 4px solid burlywood; border-radius: 10px; transition: 1000ms ease-in-out all;">
+                <path class="global-X-Axis"d="m -3 7 l 20 0 m 0 0 l -5 4 m 5 -4 l -5 -4 m 15 7  "fill="none" stroke="black" stroke-width="2px" stroke-linecap="round" style=" stroke: #111111 !important;"/>
+            </svg>
+        </section>
+
+        <p class="instructions">Click and drag or select a node and use w, a, s, d keys to move the node around<br>Alternatively, set each
+            node's coordinates in the table</p>
+            
+
+            <section id="figure1">
+                <svg id="savage" class="savage" xmlns="http://www.w3.org/2000/svg" viewBox="-30 -35 200 150">
+                    <path class="Y-Axis-line dass"d=" m 10 100 l 0 -120 m 10 120 l 0 -120 m 10 120 l 0 -120 m 10 120 l 0 -120 m 10 120 l 0 -120 m 10 120 l 0 -120 m 10 120 l 0 -120 m 10 120 l 0 -120 m 10 120 l 0 -120 m 10 120 l 0 -120 m 10 120 l 0 -120 m 10 120 l 0 -120 m 10 120 l 0 -120 m 10 120 l 0 -120"fill="none" stroke-width="0.75px" stroke-linecap="round" />
+                    <path class="X-Axis-line dass"d=" m 0 100 l 140 0 m -140 -10 l 140 0  m -140 -10 l 140 0 m -140 -10 l 140 0 m -140 -10 l 140 0 m -140 -10 l 140 0 m -140 -10 l 140 0 m -140 -10 l 140 0 m -140 -10 l 140 0 m -140 -10 l 140 0 m -140 -10 l 140 0 m -140 -10 l 140 0  m -140 -10 l 140 0"fill="none" stroke-width="0.75px" stroke-linecap="round" />
+                    <path class="global-X-Axis"d="m 140 100 l 15 0 m 0 0 l -5 4 m 5 -4 l -5 -4 m 15 7 l -6 -6 m 3 3 m 0 0 m -3 3 l 6 -6 "fill="none" stroke="black" stroke-width="2px" stroke-linecap="round" />
+                    <path class="X-Axis-line mainAxis" d="m 0 100 l 140 0" fill="none" stroke="black" stroke-width="2px" stroke-linecap="round" />
+                    <path class="global-Y-Axis"d="m 0 -20 l 0 -15 m 0 0 l -5 6 m 5 -6 l 5 6 m -7 -10 l 5 -9 m -5 0 l 2 3 " fill="none"stroke="black" stroke-width="2px" stroke-linecap="round" />
+                    <path class="Y-Axis-line mainAxis" d="m 0 80 l 0 -100" fill="none" stroke="black" stroke-width="2px"
+                        stroke-linecap="round" />
+                    <g id="element-lines" class=""></g>
+                    <g id="component-paths" class=""></g>
+                    <g id="node-circles" class=""></g>
+                    <g id="element-labels" class="hideBarText"></g>
+                    <g id="node-labels" class=""></g>
+                </svg>
+                <div class="caption" style="padding-bottom: 1rem;">
+                    <button id="showBarLabel" class="" style="width: 12rem;">Show Element Labels</button>
+                    <button id="deformPlot" class="" style="width: 12rem;" >Preview Results Visually</button>
+                </div>
+                <div class="caption">
+                    <button id="updateResults" class="">Update Results</button>
+                    <button id="addElementBtn" class="">Add An Element</button>
+                    <button id="addNodeBtn" class="">Add A Node</button>
+                    <button id="addComponentBtn" class="">Add A Component</button>
+                    <button id="addMaterialBtn" class="">Materials</button>
+                    <button id="resetTruss" class="">Reset</button>
+                </div>
+            </section>
+
+        <section id="results-container" class="body-section">
+            <div class="data-selection">
+                <h2 id="Results" class="Results">Results</h2>
+            </div>
+            <div id="results-table" class="results-table">
+
+            </div>
+        </section>
+    </div>
+
+    <div class="body tables-container-body" style="align-items: stretch;" >
+        <section id="nodes-container" class="body-section" style="min-width: 47rem;">
+            <div class="data-selection">
+                <button id="Coordinates" class=""><span class="table-title">Nodes</span></button>
+            </div>
+            <table id="node-coordinates" class="node-coordinates">
+                <thead>
+                    <tr>
+                        <th>Node</th>
+                        <th>x-value</th>
+                        <th>y-value</th>
+                    </tr>
+                </thead>
+
+                <tbody id="node-values-table">
+                </tbody>
+                <tr id="gap-row"></tr>
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>At Node</th>
+                        <th>Angle [deg]</th>
+                        <th>Value [lb]</th>
+                    </tr>
+                </thead>
+
+                <tbody id="component-values-table">
+
+                </tbody>
+            </table>
+        </section>
+
+        <section id="elements-container" class="body-section" style="min-width: 47rem;">
+            <div class="data-selection">
+                <button id="Elements" class=""><span class="table-title">Elements</span></button>
+            </div>
+
+            <table id="element-connections" class="element-connections">
+                <thead>
+                    <tr class="elements-headers">
+                        <th>Elements</th>
+                        <th>Node Connectivity</th>
+                        <th>Cross Section</th>
+                        <th>Material</th>
+                    </tr>
+                </thead>
+
+                <tbody id="element-values-table">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <section id="stiffness-matrix-container" class="body-section">
+
+            <div class="data-selection" style="display: flex; min-width: 55rem; margin-bottom: 0.5rem;min-height:5rem;" >
+                <button id="Global-Matrix" ><span class="table-title" style="line-height: 2rem; margin-left: -5rem;" >Global Equilibrium Equation: <b style="padding-left: 1rem; font-size: 1.75rem; letter-spacing: 4px;"> [k]{u}={F}</b></span></button>
+            </div>
+
+            <div style="display: flex; justify-content: space-evenly; align-items: center; margin-bottom: 0.5rem;">
+            <table id="Global-stiffness-matrix" class="Global-stiffness-matrix" style="padding: 1rem 0rem; width: 10rem;">
+                <thead>
+                    <tr id="stiffness-matrix-thead-row">
+                        <th class="not"></th>
+                        <th>u1</th>
+                        <th>v1</th>
+                        <th>u2</th>
+                        <th>v2</th>
+                        <th>u3</th>
+                        <th>v3</th>
+                        <th>u4</th>
+                        <th>v4</th>
+                    </tr>
+                </thead>
+                <tbody id="stiffness-matrix-tbody">
+                    <tr>
+                        <th>u1</th>
+                        <td><span class="MatrixCell" id="1x1">0</span></td>
+                        <td><span class="MatrixCell" id="1x2">0</span></td>
+                        <td><span class="MatrixCell" id="1x3">0</span></td>
+                        <td><span class="MatrixCell" id="1x4">0</span></td>
+                        <td><span class="MatrixCell" id="1x5">0</span></td>
+                        <td><span class="MatrixCell" id="1x6">0</span></td>
+                        <td><span class="MatrixCell" id="1x7">0</span></td>
+                        <td><span class="MatrixCell" id="1x8">0</span></td>
+                    </tr>
+                    <tr>
+                        <th>v1</th>
+                        <td><span class="MatrixCell" id="2x1">0</span></td>
+                        <td><span class="MatrixCell" id="2x2">0</span></td>
+                        <td><span class="MatrixCell" id="2x3">0</span></td>
+                        <td><span class="MatrixCell" id="2x4">0</span></td>
+                        <td><span class="MatrixCell" id="2x5">0</span></td>
+                        <td><span class="MatrixCell" id="2x6">0</span></td>
+                        <td><span class="MatrixCell" id="2x7">0</span></td>
+                        <td><span class="MatrixCell" id="2x8">0</span></td>
+                    </tr>
+                    <tr>
+                        <th>u2</th>
+                        <td><span class="MatrixCell" id="3x1">0</span></td>
+                        <td><span class="MatrixCell" id="3x2">0</span></td>
+                        <td><span class="MatrixCell" id="3x3">0</span></td>
+                        <td><span class="MatrixCell" id="3x4">0</span></td>
+                        <td><span class="MatrixCell" id="3x5">0</span></td>
+                        <td><span class="MatrixCell" id="3x6">0</span></td>
+                        <td><span class="MatrixCell" id="3x7">0</span></td>
+                        <td><span class="MatrixCell" id="3x8">0</span></td>
+                    </tr>
+                    <tr>
+                        <th>v2</th>
+                        <td><span class="MatrixCell" id="4x1">0</span></td>
+                        <td><span class="MatrixCell" id="4x2">0</span></td>
+                        <td><span class="MatrixCell" id="4x3">0</span></td>
+                        <td><span class="MatrixCell" id="4x4">0</span></td>
+                        <td><span class="MatrixCell" id="4x5">0</span></td>
+                        <td><span class="MatrixCell" id="4x6">0</span></td>
+                        <td><span class="MatrixCell" id="4x7">0</span></td>
+                        <td><span class="MatrixCell" id="4x8">0</span></td>
+                    </tr>
+                    <tr>
+                        <th>u3</th>
+                        <td><span class="MatrixCell" id="5x1">0</span></td>
+                        <td><span class="MatrixCell" id="5x2">0</span></td>
+                        <td><span class="MatrixCell" id="5x3">0</span></td>
+                        <td><span class="MatrixCell" id="5x4">0</span></td>
+                        <td><span class="MatrixCell" id="5x5">0</span></td>
+                        <td><span class="MatrixCell" id="5x6">0</span></td>
+                        <td><span class="MatrixCell" id="5x7">0</span></td>
+                        <td><span class="MatrixCell" id="5x8">0</span></td>
+                    </tr>
+                    <tr>
+                        <th>v3</th>
+                        <td><span class="MatrixCell" id="6x1">0</span></td>
+                        <td><span class="MatrixCell" id="6x2">0</span></td>
+                        <td><span class="MatrixCell" id="6x3">0</span></td>
+                        <td><span class="MatrixCell" id="6x4">0</span></td>
+                        <td><span class="MatrixCell" id="6x5">0</span></td>
+                        <td><span class="MatrixCell" id="6x6">0</span></td>
+                        <td><span class="MatrixCell" id="6x7">0</span></td>
+                        <td><span class="MatrixCell" id="6x8">0</span></td>
+                    </tr>
+                    <tr>
+                        <th>u4</th>
+                        <td><span class="MatrixCell" id="7x1">0</span></td>
+                        <td><span class="MatrixCell" id="7x2">0</span></td>
+                        <td><span class="MatrixCell" id="7x3">0</span></td>
+                        <td><span class="MatrixCell" id="7x4">0</span></td>
+                        <td><span class="MatrixCell" id="7x5">0</span></td>
+                        <td><span class="MatrixCell" id="7x6">0</span></td>
+                        <td><span class="MatrixCell" id="7x7">0</span></td>
+                        <td><span class="MatrixCell" id="7x8">0</span></td>
+                    </tr>
+                    <tr>
+                        <th>v4</th>
+                        <td><span class="MatrixCell" id="8x1">0</span></td>
+                        <td><span class="MatrixCell" id="8x2">0</span></td>
+                        <td><span class="MatrixCell" id="8x3">0</span></td>
+                        <td><span class="MatrixCell" id="8x4">0</span></td>
+                        <td><span class="MatrixCell" id="8x5">0</span></td>
+                        <td><span class="MatrixCell" id="8x6">0</span></td>
+                        <td><span class="MatrixCell" id="8x7">0</span></td>
+                        <td><span class="MatrixCell" id="8x8">0</span></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="1 1 12 12" style="width: 4.5rem; margin-inline: -1rem; height: fit-content;">
+                <path class="global-X-Axis"d="m 10 10 l -6 -6 m 3 3 m 0 0 m -3 3 l 6 -6 "fill="none" stroke="black" stroke-width="1.5px" stroke-linecap="round" />
+            </svg>
+
+            <table id="Global-dislacement-matrix" class="Global-stiffness-matrix" style="padding: 1rem 0rem; width: 3rem;">
+                <thead>
+                    <tr style="border-top: none;  padding-bottom: 0.75rem;"><th style = "font-size: 1.5rem; padding: 0.375rem; border:none;">{u}</th></tr>
+                </thead>
+                <tbody id="displacement-matrix-tbody" >
+                    <tr><td><span class="DisplacementMatrixCell" id="1x1">0</span></td></tr>
+                    <tr><td><span class="DisplacementMatrixCell" id="2x1">0</span></td></tr>
+                    <tr><td><span class="DisplacementMatrixCell" id="3x1">0</span></td></tr>
+                    <tr><td><span class="DisplacementMatrixCell" id="4x1">0</span></td></tr>
+                    <tr><td><span class="DisplacementMatrixCell" id="5x1">0</span></td></tr>
+                    <tr><td><span class="DisplacementMatrixCell" id="6x1">0</span></td></tr>
+                    <tr><td><span class="DisplacementMatrixCell" id="7x1">0</span></td></tr>
+                    <tr><td><span class="DisplacementMatrixCell" id="8x1">0</span></td></tr>
+                </tbody>
+            </table>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="1 1 12 12" style="width: 5rem; margin-inline: -1rem; height: fit-content;">
+                <path class="global-X-Axis"d="m 10 5.5 l -6 0 m 6 3  l -6 0 "fill="none" stroke="black" stroke-width="1.5px" stroke-linecap="round" />
+            </svg>
+
+            <table id="Global-Force-matrix" class="Global-stiffness-matrix" style="padding: 1rem 0rem; width: 3rem; ">
+                <thead>
+                    <tr style="border-top: none; padding-bottom: 0.75rem;"><th style = "font-size: 1.5rem;padding: 0.375rem; border:none;text-align: center; width: 100%;">{F}</th></tr>
+                </thead>
+                <tbody id="force-matrix-tbody">
+                    <tr><td><span class="ForceMatrixCell" id="1x1">0</span></td></tr>
+                    <tr><td><span class="ForceMatrixCell" id="2x1">0</span></td></tr>
+                    <tr><td><span class="ForceMatrixCell" id="3x1">0</span></td></tr>
+                    <tr><td><span class="ForceMatrixCell" id="4x1">0</span></td></tr>
+                    <tr><td><span class="ForceMatrixCell" id="5x1">0</span></td></tr>
+                    <tr><td><span class="ForceMatrixCell" id="6x1">0</span></td></tr>
+                    <tr><td><span class="ForceMatrixCell" id="7x1">0</span></td></tr>
+                    <tr><td><span class="ForceMatrixCell" id="8x1">0</span></td></tr>
+                </tbody>
+            </table>
+
+            </div>
+        </section>
+
+    </div>
+</body>
+<!-- <script type="module" src="script.js"></script> -->
+<script type="module" src="scriptUp.js"></script>
+<script type="module" src="helperFunctions.js"></script>
+<script type="module" src="ENGR492_CP2_submission.js"></script>
+
+</html>
