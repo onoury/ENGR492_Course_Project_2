@@ -331,7 +331,7 @@ svg > .element:hover{
 
 .stiffness-matrix-table-container {
     display: flex;
-    /* justify-content: space-evenly; */
+    justify-content: center;
     align-items: center;
     margin-bottom: 0.25rem;
     max-width: 100% !important;
