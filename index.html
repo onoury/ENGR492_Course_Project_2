@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html >
+<html lang="en" >
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,8 @@
 </head>
 
 <body>
-    <div class="body" style="justify-items: stretch;">
+    <div class='wrapper'>
+    <div class="body">
         <section class="header" style="position: relative;">
             <div id="darkMode-btn" class="darkModeBtn">
             <svg id="darkMode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style=" height: 3.5rem; width: 3.5rem; background-color: white; border: 4px solid burlywood; border-radius: 100px; transition: 1000ms ease-in-out all">
@@ -20,8 +21,7 @@
             </svg>
             <text style="position: absolute; top: 120%; left: 20%; font-size: large; ">Dark Mode</text>
             </div>
-
-            <a href="https://onoury.github.io/ENGR492_Project_2_Report" target="_blank" id="ReportLinkBtn" style="position: absolute; top: 6%; left: 3rem; height: 8rem; width: 4rem; scale: 0.9; ">
+            <a href="https://onoury.github.io/ENGR492_Project_2_Report" target="_blank" id="ReportLinkBtn" style="position: absolute; top: 0rem; left: 2.5rem; height: 8rem; width: 4rem; scale: 0.8; ">
                     <svg id="Report-svg-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="icon" style=" height: 3.5rem; width: 3.5rem; background-color: white; border: 2px solid burlywood; border-radius: 10px; transition: 1000ms ease-in-out all">
                             <path d="M719.8 651.8m-10 0a10 10 0 1 0 20 0 10 10 0 1 0-20 0Z" fill="#E73B37" /><path d="M512.1 64H172v896h680V385.6L512.1 64z m278.8 324.3h-280v-265l280 265zM808 916H216V108h278.6l0.2 0.2v296.2h312.9l0.2 0.2V916z" fill="#39393A" /><path d="M280.5 530h325.9v16H280.5z" fill="#39393A" /><path d="M639.5 530h90.2v16h-90.2z" fill="#E73B37" /><path d="M403.5 641.8h277v16h-277z" fill="#39393A" /><path d="M280.6 641.8h91.2v16h-91.2z" fill="#E73B37" /><path d="M279.9 753.7h326.5v16H279.9z" fill="#39393A" /><path d="M655.8 753.7h73.9v16h-73.9z" fill="#E73B37" />
                     </svg>
@@ -29,7 +29,7 @@
             </a>
             <h1 class="title">ENGR 492</h1>
             <h2 class="subtitle">Course Project # 2</h2>
-            <svg id="flip-tables-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 14" style="position:absolute; right: 1rem; height: 5rem; width: 10rem; transform: rotate(90deg) scale(0.375); background-color: beige; border: 4px solid burlywood; border-radius: 10px; transition: 1000ms ease-in-out all;">
+            <svg id="flip-tables-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 14" style="position:absolute; right: -1rem; height: 5rem; width: 10rem; transform: rotate(90deg) scale(0.375); background-color: beige; border: 4px solid burlywood; border-radius: 10px; transition: 1000ms ease-in-out all;">
                 <path class="global-X-Axis"d="m -3 7 l 20 0 m 0 0 l -5 4 m 5 -4 l -5 -4 m 15 7  "fill="none" stroke="black" stroke-width="2px" stroke-linecap="round" style=" stroke: #111111 !important;"/>
             </svg>
         </section>
@@ -53,7 +53,7 @@
                     <g id="element-labels" class="hideBarText"></g>
                     <g id="node-labels" class=""></g>
                 </svg>
-                <div class="caption" style="padding-bottom: 1rem;">
+                <div class="caption" style="padding-bottom: 0.5rem;">
                     <button id="showBarLabel" class="" style="width: 12rem;">Show Element Labels</button>
                     <button id="deformPlot" class="" style="width: 12rem;" >Preview Results Visually</button>
                 </div>
@@ -77,8 +77,8 @@
         </section>
     </div>
 
-    <div class="body tables-container-body" style="align-items: stretch;" >
-        <section id="nodes-container" class="body-section" style="min-width: 47rem;">
+    <div class="body tables-container-body" style="align-items: stretch; " >
+        <section id="nodes-container" class="body-section">
             <div class="data-selection">
                 <button id="Coordinates" class=""><span class="table-title">Nodes</span></button>
             </div>
@@ -109,7 +109,7 @@
             </table>
         </section>
 
-        <section id="elements-container" class="body-section" style="min-width: 47rem;">
+        <section id="elements-container" class="body-section">
             <div class="data-selection">
                 <button id="Elements" class=""><span class="table-title">Elements</span></button>
             </div>
@@ -134,12 +134,12 @@
 
         <section id="stiffness-matrix-container" class="body-section">
 
-            <div class="data-selection" style="display: flex; min-width: 55rem; margin-bottom: 0.5rem;min-height:5rem;" >
-                <button id="Global-Matrix" ><span class="table-title" style="line-height: 2rem; margin-left: -5rem;" >Global Equilibrium Equation: <b style="padding-left: 1rem; font-size: 1.75rem; letter-spacing: 4px;"> [k]{u}={F}</b></span></button>
+            <div class="data-selection" >
+                <span class="table-title" style="height: fit-content; margin-block: auto; font-size: 1.375rem" >Global Equilibrium Equation: <b style="padding-left: 0.5rem; font-size: 1.4rem; letter-spacing: 4px;"> [k]{u}={F}</b></span>
             </div>
 
-            <div style="display: flex; justify-content: space-evenly; align-items: center; margin-bottom: 0.5rem;">
-            <table id="Global-stiffness-matrix" class="Global-stiffness-matrix" style="padding: 1rem 0rem; width: 10rem;">
+            <div style="display: flex; justify-content: space-evenly; align-items: center; margin-bottom: 0.25rem;">
+            <table id="Global-stiffness-matrix" class="Global-stiffness-matrix" style="padding: 0.25rem 0rem; width: 10rem;">
                 <thead>
                     <tr id="stiffness-matrix-thead-row">
                         <th class="not"></th>
@@ -246,7 +246,7 @@
                 </tbody>
             </table>
 
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="1 1 12 12" style="width: 4.5rem; margin-inline: -1rem; height: fit-content;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="stiff-matrix-multiply-svg" viewBox="1 1 12 12" >
                 <path class="global-X-Axis"d="m 10 10 l -6 -6 m 3 3 m 0 0 m -3 3 l 6 -6 "fill="none" stroke="black" stroke-width="1.5px" stroke-linecap="round" />
             </svg>
 
@@ -266,7 +266,7 @@
                 </tbody>
             </table>
 
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="1 1 12 12" style="width: 5rem; margin-inline: -1rem; height: fit-content;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="stiff-matrix-equal-svg" viewBox="1 1 12 12" >
                 <path class="global-X-Axis"d="m 10 5.5 l -6 0 m 6 3  l -6 0 "fill="none" stroke="black" stroke-width="1.5px" stroke-linecap="round" />
             </svg>
 
@@ -289,6 +289,7 @@
             </div>
         </section>
 
+    </div>
     </div>
 </body>
 <!-- <script type="module" src="script.js"></script> -->
